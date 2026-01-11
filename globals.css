@@ -1,0 +1,182 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Dark Garage theme with Racing Orange accents */
+  --background: oklch(0.12 0.01 240);
+  --foreground: oklch(0.96 0.005 240);
+  --card: oklch(0.15 0.015 240);
+  --card-foreground: oklch(0.96 0.005 240);
+  --popover: oklch(0.14 0.015 240);
+  --popover-foreground: oklch(0.96 0.005 240);
+  --primary: oklch(0.65 0.22 40);
+  --primary-foreground: oklch(0.98 0.005 240);
+  --secondary: oklch(0.22 0.02 240);
+  --secondary-foreground: oklch(0.96 0.005 240);
+  --muted: oklch(0.2 0.015 240);
+  --muted-foreground: oklch(0.6 0.01 240);
+  --accent: oklch(0.25 0.025 240);
+  --accent-foreground: oklch(0.96 0.005 240);
+  --destructive: oklch(0.5 0.22 25);
+  --destructive-foreground: oklch(0.98 0.005 240);
+  --border: oklch(0.25 0.02 240);
+  --input: oklch(0.25 0.02 240);
+  --ring: oklch(0.65 0.22 40);
+  --chart-1: oklch(0.65 0.22 40);
+  --chart-2: oklch(0.6 0.18 200);
+  --chart-3: oklch(0.7 0.15 160);
+  --chart-4: oklch(0.7 0.18 290);
+  --chart-5: oklch(0.75 0.2 320);
+  --radius: 0.75rem;
+  --sidebar: oklch(0.1 0.015 240);
+  --sidebar-foreground: oklch(0.92 0.005 240);
+  --sidebar-primary: oklch(0.65 0.22 40);
+  --sidebar-primary-foreground: oklch(0.98 0.005 240);
+  --sidebar-accent: oklch(0.18 0.02 240);
+  --sidebar-accent-foreground: oklch(0.96 0.005 240);
+  --sidebar-border: oklch(0.22 0.02 240);
+  --sidebar-ring: oklch(0.65 0.22 40);
+}
+
+.dark {
+  --background: oklch(0.12 0.01 240);
+  --foreground: oklch(0.96 0.005 240);
+  --card: oklch(0.15 0.015 240);
+  --card-foreground: oklch(0.96 0.005 240);
+  --popover: oklch(0.14 0.015 240);
+  --popover-foreground: oklch(0.96 0.005 240);
+  --primary: oklch(0.65 0.22 40);
+  --primary-foreground: oklch(0.98 0.005 240);
+  --secondary: oklch(0.22 0.02 240);
+  --secondary-foreground: oklch(0.96 0.005 240);
+  --muted: oklch(0.2 0.015 240);
+  --muted-foreground: oklch(0.6 0.01 240);
+  --accent: oklch(0.25 0.025 240);
+  --accent-foreground: oklch(0.96 0.005 240);
+  --destructive: oklch(0.5 0.22 25);
+  --destructive-foreground: oklch(0.98 0.005 240);
+  --border: oklch(0.25 0.02 240);
+  --input: oklch(0.25 0.02 240);
+  --ring: oklch(0.65 0.22 40);
+  --chart-1: oklch(0.65 0.22 40);
+  --chart-2: oklch(0.6 0.18 200);
+  --chart-3: oklch(0.7 0.15 160);
+  --chart-4: oklch(0.7 0.18 290);
+  --chart-5: oklch(0.75 0.2 320);
+  --sidebar: oklch(0.1 0.015 240);
+  --sidebar-foreground: oklch(0.92 0.005 240);
+  --sidebar-primary: oklch(0.65 0.22 40);
+  --sidebar-primary-foreground: oklch(0.98 0.005 240);
+  --sidebar-accent: oklch(0.18 0.02 240);
+  --sidebar-accent-foreground: oklch(0.96 0.005 240);
+  --sidebar-border: oklch(0.22 0.02 240);
+  --sidebar-ring: oklch(0.65 0.22 40);
+}
+
+@theme {
+  --font-sans: "Geist", "Geist Fallback";
+  --font-mono: "Geist Mono", "Geist Mono Fallback";
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    /* Add blurred mountain road background with low opacity */
+    background-image: url("/placeholder.svg?height=1080&width=1920");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-blend-mode: overlay;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: oklch(0.12 0.01 240 / 0.92);
+    z-index: -1;
+    pointer-events: none;
+  }
+}
+
+/* Glassmorphism utilities */
+@layer utilities {
+  .glass {
+    background: oklch(0.15 0.015 240 / 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid oklch(0.3 0.02 240 / 0.3);
+  }
+
+  .glass-strong {
+    background: oklch(0.15 0.015 240 / 0.85);
+    backdrop-filter: blur(16px);
+    border: 1px solid oklch(0.3 0.02 240 / 0.4);
+  }
+
+  /* Carbon fiber pattern for sidebar */
+  .carbon-fiber {
+    background-image: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        oklch(0.08 0.015 240 / 0.15) 2px,
+        oklch(0.08 0.015 240 / 0.15) 4px
+      ),
+      repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 2px,
+        oklch(0.08 0.015 240 / 0.15) 2px,
+        oklch(0.08 0.015 240 / 0.15) 4px
+      );
+  }
+
+  .hex-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='28' height='49' viewBox='0 0 28 49' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.03' fill-rule='evenodd'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/svg%3E");
+  }
+}
